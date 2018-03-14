@@ -1,5 +1,4 @@
 FROM debian:stretch
-MAINTAINER Adrian Dvergsdal [atmoz.net]
 
 # Steps done in one RUN layer:
 # - Install packages
