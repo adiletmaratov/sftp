@@ -4,7 +4,7 @@ services:
     build: .
     volumes:
       - ./users.conf:/etc/sftp/users.conf:ro
-      - ./volume:/home
+      - ./volume/testuser:/home/testuser/upload
       - /etc/ssh/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key
     ports:
       - "2222:22"
