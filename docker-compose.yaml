@@ -7,4 +7,5 @@ services:
       - ./volume/testuser:/home/testuser/upload
       - /etc/ssh/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key
     ports:
-      - "2222:22"
+      - "22:22"
+    user: adiletmaratov
