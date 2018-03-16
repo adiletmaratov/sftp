@@ -104,6 +104,7 @@ function createUser() {
                 log "Creating directory: $dirPath"
                 mkdir -p $dirPath
                 chown -R $uid:users $dirPath
+                chmod 311 $dirPath
             else
                 log "Directory already exists: $dirPath"
             fi

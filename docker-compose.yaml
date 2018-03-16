@@ -1,10 +1,10 @@
 version: '3'
 services:
   sftp:
-    image: atmoz/sftp
+    build: .
     volumes:
       - ./users.conf:/etc/sftp/users.conf:ro
-      - ./volume/testuser:/home/testuser/upload
       - /etc/ssh/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key
+      - ./volume/testuser:/home/testuser/upload
     ports:
       - "2222:22"

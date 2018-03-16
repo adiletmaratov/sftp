@@ -47,12 +47,16 @@ put /home/amaratov/projects/rxwiki/sftp/README.md .
 
 ```<username>:<password>:<sftp-uid>:<sftp-gid>:upload```
 
-2. add a sub directory for that user in volume directory. Name of newly created directory should match username in users.conf file
+1. add a sub directory for that user in volume directory. Name of newly created directory should match username in users.conf file
 
 ```
 cd sftp/volume
 mkdir <username>
 ```
+
+1. add volume for newly created user in docker-compose.yaml
+
+```- ./volume/<username>:/home/<username>/upload```
 
 
 ## Run sftp server ##
