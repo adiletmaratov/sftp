@@ -88,10 +88,19 @@ Put public key to `<username>/.ssh/keys` dir. For more details see README.md
 
 ## Run sftp server ##
 
+Go to `volume` dir and run command 
+
+```chmod 775 * ```
+
 ```
 docker-compose up --build
 ```
 
+Go to `volume` dir and run command 
+
+```chmod 311 * ```
+
+this will restrict users to read and make all directories write and excecute only.
 
 ## How to connect ##
 
