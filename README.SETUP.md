@@ -1,21 +1,3 @@
-## Commands ##
-
-
-```
-docker run -p 2222:22 -v /etc/ssh/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key -v /etc/ssh/ssh_host_ed25519_key:/etc/ssh/ssh_host_ed25519_key -v $(pwd)/users.conf:/etc/sftp/users.conf:ro -v $(pwd)/volume:/home --user 213000036 sftp
-```
-
-
-```
-docker run -p 2222:22 -d -v $(pwd)/users.conf:/etc/sftp/users.conf:ro -v $(pwd)/volume:/home atmoz/sftp
-```
-
-
-```
-put /home/amaratov/projects/rxwiki/sftp/README.md .
-```
-
-
 ## How to setup sftp ##
 
 1. Create user
@@ -62,6 +44,6 @@ mkdir <username>
 ## Run sftp server ##
 
 ```
-docker-compose up
+docker-compose up --build
 ```
 
