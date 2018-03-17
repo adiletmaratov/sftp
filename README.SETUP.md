@@ -36,6 +36,13 @@
 
 In order to attach a persistent disk, follow this documentation https://cloud.google.com/compute/docs/disks/add-persistent-disk
 
+Mount newly created disk to /home/sftp/sftp/volume directory so that all files in there are written to the disk.
+
+After the disk is mounted, go ahead and make sftp user the owner of everything inside of /home/sftp/sftp/volume
+
+```
+sudo chown sftp *
+```
 
 ## How to add users ##
 
