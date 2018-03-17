@@ -4,6 +4,8 @@
 
 1. Docker and docker-compose installed
 
+1. Read README.md
+
 
 ## How to setup sftp ##
 
@@ -35,7 +37,9 @@
 In order to attach a persistent disk, follow this documentation https://cloud.google.com/compute/docs/disks/add-persistent-disk
 
 
-## How to add new users with username password authentication##
+## How to add users ##
+
+1. Get sftp user and group ids `id -u sftp` and `id -g sftp`
 
 1. Add user to users.conf 
 
@@ -82,7 +86,17 @@ docker-compose up --build
 ```
 
 
-## How to connect using username password##
+## How to connect ##
 
-```sftp testuser@<server-ip>
+To connect to sftp server run: 
+
+```
+sftp testuser@<server-ip>
+```
+
+Now you can use command to send files:
+
+```
+put /some/absolue/path/on/host upload/
+```
 
