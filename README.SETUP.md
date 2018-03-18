@@ -63,6 +63,8 @@ mkdir <username>
 
 ```- ./volume/<username>:/home/<username>/upload```
 
+Why should I mount a new volume for every user? https://askubuntu.com/questions/134425/how-can-i-chroot-sftp-only-ssh-users-into-their-homes
+
 
 ## How to add new users with SSH authentication ##
 
@@ -80,6 +82,8 @@ mkdir <username>
 1. add volume for newly created user in docker-compose.yaml
 
 ```- ./volume/<username>:/home/<username>/upload```
+
+Why should I mount a new volume for every user? https://askubuntu.com/questions/134425/how-can-i-chroot-sftp-only-ssh-users-into-their-homes
 
 1. add SSH key
 
